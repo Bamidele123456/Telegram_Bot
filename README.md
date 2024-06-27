@@ -1,0 +1,1 @@
+This is a telegram bot that can be used to purchase items from an online store it links to the database of a website it uses the database of the website to get data therefore answers buyers queries
