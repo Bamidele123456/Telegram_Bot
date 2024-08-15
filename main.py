@@ -4,47 +4,12 @@ from datetime import datetime
 import telegram
 import asyncio
 import json
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
-import pymongo
 from telegram.ext import Application, CommandHandler,ConversationHandler, MessageHandler, filters, ContextTypes, CallbackContext, \
     CallbackQueryHandler
 from typing import Final
 import base64
 import time
 import io
-
-
-TOKEN : Final = ''
-
-uri = ""
-client = MongoClient(uri)
-
-db = client['']
-user_collection = db['users']
-dpictures = db['dpictures']
-variant = db['variant']
-services = db['services']
-svariant = db['svariant']
-category = db['category']
-sub = db['sub']
-scategory = db['scategory']
-opening = db['opening']
-ssub = db['ssub']
-faq = db['FAQ']
-discount = db['discount']
-notif = db['Notification']
-os = db['Other Settings']
-bank = db['BankD']
-sociall = db["lsocial"]
-
-client = MongoClient(uri, server_api=ServerApi('1'))
-# Send a ping to confirm a successful connection
-try:
-    client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
-except Exception as e:
-    print(e)
 
 
 SIZE, NUMBER, EMAIL, PHONE, ADDRESS = range(5)
